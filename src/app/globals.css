@@ -1,26 +1,59 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/* Palette carried over from the Sumeet Urban Nest site */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ink: #2b2623;
+  --color-ink-soft: #625a55;
+  --color-muted: #8a817b;
+  --color-cream: #f8f7f3;
+  --color-sand: #f8f1e8;
+  --color-line: #e8e4dc;
+  --color-gold: #d6ac70;
+  --color-gold-dark: #b98d4f;
+  --font-sans: var(--font-montserrat);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-cream);
+  color: var(--color-ink);
+}
+
+/* Gutter matching Container's padding at each breakpoint */
+:root {
+  --gutter: 1.25rem;
+}
+@media (min-width: 40rem) { :root { --gutter: 2.5rem; } }
+@media (min-width: 48rem) { :root { --gutter: 3.5rem; } }
+@media (min-width: 64rem) { :root { --gutter: 3rem; } }
+@media (min-width: 80rem) { :root { --gutter: 3.5rem; } }
+@media (min-width: 96rem) { :root { --gutter: 4rem; } }
+
+/* Full-bleed scroller whose first slide lines up with the Container edge */
+.bleed-track {
+  --bleed: max(var(--gutter), calc((100% - 2000px) / 2 + var(--gutter)));
+  padding-inline: var(--bleed);
+  scroll-padding-inline: var(--bleed);
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
 }
