@@ -71,7 +71,7 @@ export default function ProjectsCarousel() {
                 id="projects-heading"
                 className="mt-4 text-3xl font-semibold leading-tight tracking-tight text-ink sm:text-4xl xl:text-5xl"
               >
-                Our Projects
+                Real Estate Projects in Raipur
               </h1>
             </div>
             <p className="mt-4 text-base font-light leading-7 text-ink-soft sm:text-lg lg:mt-0 lg:max-w-md lg:text-base">

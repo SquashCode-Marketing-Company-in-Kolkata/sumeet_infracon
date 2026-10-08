@@ -10,15 +10,9 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: `${site.name} | Residential & Commercial Projects in Raipur`,
+  title: `${site.name} | Real Estate Projects in Raipur`,
   description:
-    "Sumeet Infracon develops residential, commercial and plotted projects in Raipur, Chhattisgarh, including Sumeet Urban Nest, Sumeet Trade Centre, Sumeet City of Dreams and Sumeet Landscape.",
-  openGraph: {
-    title: site.name,
-    description: site.tagline,
-    type: "website",
-    images: ["/images/projects/sumeet-urban-nest.webp"],
-  },
+    "Explore Sumeet Infracon's residential, commercial and plotted projects in Raipur, Chhattisgarh, including Sumeet Urban Nest and Sumeet Trade Centre.",
 };
 
 export const viewport: Viewport = {

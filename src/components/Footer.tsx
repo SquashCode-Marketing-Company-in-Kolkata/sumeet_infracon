@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Container from "./Container";
 import { FacebookIcon, InstagramIcon } from "./icons";
 import { site } from "@/lib/site";
@@ -10,7 +11,7 @@ export default function Footer() {
       <Container>
         <div className="grid gap-10 md:grid-cols-2 md:gap-x-14 md:gap-y-10 lg:grid-cols-[1.2fr_1fr_1fr]">
           <div className="md:col-span-2 lg:col-span-1">
-            <a href="#" aria-label={`${site.name} home`} className="inline-flex">
+            <Link href="/" aria-label={`${site.name} home`} className="inline-flex">
               <Image
                 src="/images/sumeet-infracon-logo.webp"
                 alt={site.name}
@@ -18,7 +19,7 @@ export default function Footer() {
                 height={1241}
                 className="h-auto w-[110px] object-contain md:w-[130px]"
               />
-            </a>
+            </Link>
             <p className="mt-5 max-w-md text-sm font-light leading-7 text-muted md:text-base">
               {site.tagline}
             </p>
